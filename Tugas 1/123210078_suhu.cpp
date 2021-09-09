@@ -7,7 +7,7 @@ int main()
 {
   float r, f, c, k;
 
-  // Konversi Suhu dari Celsius
+  // input data suhu celsius
   cout << "Konversi Suhu C++"
        << "\n"
        << "---------------------"
@@ -15,10 +15,12 @@ int main()
   cout << "Masukkan Suhu (Celsius) : ";
   cin >> c;
 
+  // Rumus konversi suhu
   r = (c * 4 / 5);
   f = (c * 9 / 5) + 32;
   k = c + 273;
 
+  // Cetak hasil konversi
   cout << "Reamur" << setw(7) << ": " << r << " derajat R"
        << "\n";
   cout << "Fahrenheit" << setw(3) << ": " << f << " derajat F"
