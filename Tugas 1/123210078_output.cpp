@@ -33,11 +33,11 @@ int main()
      cout << "NIM" << setw(7) << ": " << nim << "\n";
      cout << "Plug" << setw(6) << ": " << plug << "\n";
 
-     // Menghitung total karakter untuk menentukan strip (=)
+     // Menghitung total karakter untuk menentukan jumlah strip (=)
      jmlStrip = nama.length() + nim.length() + plug.length() + 6 + 11;
 
-     // Tabel
-     // ======= Header =======
+     // TABEL
+     // ========== Header ==========
      cout << "\n"
           << "Dalam bentuk tabel :" << endl;
 
@@ -52,8 +52,9 @@ int main()
 
      cout << setfill('=') << setw(jmlStrip - 2) << "="
           << "\n";
+     // ========== End Header ==========
 
-     // ====== Row =======
+     // ========== Row ==========
      cout << setfill(' ')
           << nim << setw(3)
           << "|" << setw(nama.length() + 2) << nama << setw(4) << "|"
@@ -62,6 +63,7 @@ int main()
 
      cout << setfill('=') << setw(jmlStrip - 2) << "="
           << "\n";
+     // ========= End Row ==========
 
      return 0;
 }

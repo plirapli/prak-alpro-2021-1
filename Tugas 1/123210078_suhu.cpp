@@ -9,6 +9,8 @@ int main()
 
   // Konversi Suhu dari Celsius
   cout << "Konversi Suhu C++"
+       << "\n"
+       << "---------------------"
        << "\n";
   cout << "Masukkan Suhu (Celsius) : ";
   cin >> c;
