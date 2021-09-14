@@ -23,7 +23,7 @@ int main()
 		cout << "Jumlah baris tidak boleh lebih dari 5."
 				 << "\n";
 
-		cout << "Baris" << setw(5) << ": ";
+		cout << "Masukkan Jumlah Baris" << setw(3) << ": ";
 		cin >> jmlBaris;
 		cin.ignore(1, '\n');
 
