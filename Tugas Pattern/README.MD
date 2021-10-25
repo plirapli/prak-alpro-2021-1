@@ -72,9 +72,9 @@ Program ini berfungsi untuk menampilkan bintang dalam berbagai macam pola, seper
 
     * * * * *
       *     *
-    	  *   *
-    	    * *
-    		   *
+        *   *
+          * *
+            *
 
 ### Full Pyramid
 
