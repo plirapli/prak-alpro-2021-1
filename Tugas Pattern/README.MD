@@ -64,9 +64,9 @@ Program ini berfungsi untuk menampilkan bintang dalam berbagai macam pola, seper
 
     * * * * *
       * * * *
-    	  * * *
-    	    * *
-    		    *
+        * * *
+          * *
+            *
 
 ### Hollow Inverted Half Pyramid (Right Align)
 
