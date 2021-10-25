@@ -1,6 +1,6 @@
 ## Tugas 2 📚
 
-Tugas 2 berisi berikut:
+Tugas 2 berisi file berikut:
 
 - Flowchart IF-ELSE IF-ELSE [**GAMBAR**](https://res.cloudinary.com/mrafliy/image/upload/v1632447078/prak-alpro-2021-1/Tugas%202/if-else_if-else_m4veqc.jpg)
 - Flowchart NESTED IF [**GAMBAR**](https://res.cloudinary.com/mrafliy/image/upload/v1632447078/prak-alpro-2021-1/Tugas%202/nested-if_okqmuq.jpg)
