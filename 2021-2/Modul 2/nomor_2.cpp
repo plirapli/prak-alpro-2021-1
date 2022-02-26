@@ -40,6 +40,28 @@ int main()
       addPenduduk(penduduk, pendudukAktif);
       break;
 
+    case '3':
+    {
+      bool found;
+      string nama;
+
+      showPenduduk(penduduk, pendudukAktif);
+
+      if (pendudukAktif != 0)
+      {
+        cout << "Masukkan nama penduduk: ";
+        cin.ignore();
+        getline(cin, nama);
+
+        if (findPenduduk(penduduk, nama, pendudukAktif) == pendudukAktif)
+        {
+        }
+        else
+          cout << "Penduduk dengan nama " + nama + " tidak ditemukan. \n\n";
+      }
+    }
+    break;
+
     case '4':
     {
       int index;
@@ -47,17 +69,21 @@ int main()
       do
       {
         showPenduduk(penduduk, pendudukAktif);
-        cout << "Baris yang ingin dihapus: ";
-        cin >> index;
 
-        if (index > pendudukAktif || index <= 0)
+        if (pendudukAktif != 0)
         {
-          cout << "Penduduk dengan nama "
-               << penduduk[index - 1].nama << " telah dihapus. \n";
-          delPenduduk(penduduk, index, pendudukAktif);
+          cout << "Baris yang ingin dihapus: ";
+          cin >> index;
+
+          if (!(index > pendudukAktif || index <= 0))
+          {
+            cout << "Penduduk dengan nama "
+                 << penduduk[index - 1].nama << " telah dihapus. \n\n";
+            delPenduduk(penduduk, index, pendudukAktif);
+          }
+          else
+            cout << "Input tidak valid. \n\n";
         }
-        else
-          cout << "Input tidak valid. \n";
       } while (index > pendudukAktif);
       break;
     }
