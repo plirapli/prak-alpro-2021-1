@@ -9,6 +9,7 @@ struct Penduduk
 } penduduk[10];
 
 void showPenduduk(Penduduk penduduk[], int pendudukAktif);
+void showProfil(Penduduk penduduk[], int n);
 int findPenduduk(Penduduk penduduk[], string nama, int pendudukAktif);
 void addPenduduk(Penduduk penduduk[], int &pendudukAktif);
 void delPenduduk(Penduduk penduduk[], int n, int &pendudukAktif);
@@ -42,7 +43,7 @@ int main()
 
     case '3':
     {
-      bool found;
+      int index;
       string nama;
 
       showPenduduk(penduduk, pendudukAktif);
@@ -53,11 +54,14 @@ int main()
         cin.ignore();
         getline(cin, nama);
 
-        if (findPenduduk(penduduk, nama, pendudukAktif) == pendudukAktif)
-        {
-        }
+        cout << "\n";
+
+        index = findPenduduk(penduduk, nama, pendudukAktif);
+
+        if (index == pendudukAktif)
+          showProfil(penduduk, index);
         else
-          cout << "Penduduk dengan nama " + nama + " tidak ditemukan. \n\n";
+          cout << "Penduduk dengan nama \"" + nama + "\" tidak ditemukan. \n\n";
       }
     }
     break;
@@ -118,6 +122,17 @@ void showPenduduk(Penduduk penduduk[], int pendudukAktif)
     cout << "Penduduk belum ada. \n\n";
 }
 
+void showProfil(Penduduk penduduk[], int n)
+{
+  cout << "Profil Penduduk: \n"
+       << "Nama: " << penduduk[n].nama << "\n"
+       << "Alamat: " << penduduk[n].alamat << "\n"
+       << "Umur: " << penduduk[n].umur << " tahun \n"
+       << "Agama: " << penduduk[n].agama << "\n"
+       << "Gol. Darah: " << penduduk[n].golDar << "\n"
+       << "Status: " << penduduk[n].status << " kawin \n\n";
+}
+
 int findPenduduk(Penduduk penduduk[], string nama, int pendudukAktif)
 {
   int index;
@@ -151,9 +166,8 @@ void addPenduduk(Penduduk penduduk[], int &pendudukAktif)
   cout << "Status [Sudah/Belum Kawin]: ";
   cin >> penduduk[pendudukAktif].status;
 
-  cout
-      << "\n"
-      << "Data berhasil ditambahkan. \n\n";
+  cout << "\n"
+       << "Data berhasil ditambahkan. \n\n";
 
   pendudukAktif++;
 }
