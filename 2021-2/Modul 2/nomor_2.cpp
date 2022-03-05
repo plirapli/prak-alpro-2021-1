@@ -58,7 +58,7 @@ int main()
 
         index = findPenduduk(penduduk, nama, pendudukAktif);
 
-        if (index == pendudukAktif)
+        if (index != pendudukAktif)
           showProfil(penduduk, index);
         else
           cout << "Penduduk dengan nama \"" + nama + "\" tidak ditemukan. \n\n";
