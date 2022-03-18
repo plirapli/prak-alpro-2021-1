@@ -172,7 +172,7 @@ int searchLagu(DataLagu lagu[], int awal, int akhir, int num)
 
 int DeretGenap(int awal, int akhir)
 {
-  if (!(awal % 2 == 0))
+  if (awal % 2 != 0)
     awal++;
 
   if (awal <= akhir)
