@@ -197,6 +197,8 @@ int DeretGanjil(int awal, int akhir)
   if (awal % 2 == 0)
     awal++;
 
-  cout << awal << ((awal == akhir || awal + 1 == akhir) ? " = " : " + ");
+  if (awal <= akhir)
+    cout << awal << ((awal >= akhir || awal + 1 >= akhir) ? " = " : " + ");
+
   return (awal <= akhir) ? (awal + DeretGanjil(awal + 2, akhir)) : 0;
 }
